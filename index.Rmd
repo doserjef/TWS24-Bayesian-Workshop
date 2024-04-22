@@ -1,0 +1,28 @@
+---
+title: "Introduction to Applied Bayesian Analysis in Wildlife Ecology"
+author:
+  - "Jeffrey W. Doser<br>Michigan State University"
+date: "May 11, 2024 9am-5am CST"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+## Course information
+
+**Instructors**: Jeff Doser
+
+**Venue**: Zoom
+
+********
+
+## Course description
+
+Management and conservation of wildlife in the 21st century involves myriad data collection approaches to provide scientific-based information to guide management decisions or answer ecological questions. These approaches range from traditional field-based line transects or surveys, to numerous automated approaches such as camera trapping, acoustic recording units, or GPS tags, to complex (and big) genetic data, to public science data. Such disparate data types require state-of-the-art statistical approaches to account for the many complexities inherent in the different ways we collect data to inform wildlife management and conservation. Bayesian analysis has become increasingly common due to its great flexibility in analyzing complex data sets with a variety of different observational and/or sampling biases. In this workshop, I will provide a gentle introduction to Bayesian modeling and its application in wildlife ecology. I will introduce the foundational concepts of Bayesian statistics and how it relates to more traditional approaches, and then we will take a guided tour of how to implement different types of statistical models in a Bayesian framework using the R package `brms`. I do not assume any previous experience with Bayesian statistics. Participants with basic knowledge of program R and statistical analysis will experience a gentler learning curve.
+
+********
+
+## GitHub Code Repository
+
+Code for all course lectures and exercises will be provided on a GitHub repository closer to the workshop dates.
