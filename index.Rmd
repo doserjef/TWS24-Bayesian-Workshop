@@ -21,8 +21,27 @@ output:
 
 Management and conservation of wildlife in the 21st century involves myriad data collection approaches to provide scientific-based information to guide management decisions or answer ecological questions. These approaches range from traditional field-based line transects or surveys, to numerous automated approaches such as camera trapping, acoustic recording units, or GPS tags, to complex (and big) genetic data, to public science data. Such disparate data types require state-of-the-art statistical approaches to account for the many complexities inherent in the different ways we collect data to inform wildlife management and conservation. Bayesian analysis has become increasingly common due to its great flexibility in analyzing complex data sets with a variety of different observational and/or sampling biases. In this workshop, I will provide a gentle introduction to Bayesian modeling and its application in wildlife ecology. I will introduce the foundational concepts of Bayesian statistics and how it relates to more traditional approaches, and then we will take a guided tour of how to implement different types of statistical models in a Bayesian framework using the R package `brms`. I do not assume any previous experience with Bayesian statistics. Participants with basic knowledge of program R and statistical analysis will experience a gentler learning curve.
 
+## Course outline
+
+This 8-hour workshop will cover the following topics: 
+
+1. Model building and modes of inference -- Frequentist vs. Bayesian inference 
+2. The basics of Bayesian inference -- how does it work?
+2. Bayesian linear models
+3. Bayesian generalized linear models
+4. Bayesian mixed models (i.e., hierarchical Bayesian models)
+
+Model fitting will primarily be done using the `brms` package, but code to fit the same models in `NIMBLE` will also be provided for direct comparison with the models fit in `brms`.  
+
+Additional materials will also be provided (but not discussed) on the following topics: 
+
++ Closed population capture-recapture models for estimating abundance
++ Open population capture-recapture models (Cormack-Jolly-Seber) models for estimating survival
++ Occupancy models for estimating species distributions
++ N-mixture models for estimating abundance using unmarked data 
+
 ********
 
 ## GitHub Code Repository
 
-Code for all course lectures and exercises will be provided on a GitHub repository closer to the workshop dates.
+Code for all course lectures and exercises will be provided on a GitHub repository closer to the workshop date.
