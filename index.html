@@ -30,6 +30,97 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+
+a.sourceLine {
+pointer-events: auto;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 
@@ -96,6 +187,27 @@ assume any previous experience with Bayesian statistics. Participants
 with basic knowledge of program R and statistical analysis will
 experience a gentler learning curve.</p>
 </div>
+<div id="prior-to-the-course-getting-started" class="section level2">
+<h2>Prior to the course getting started</h2>
+<p>This course offers lecture, discussion, and hands-on exercises on
+Bayesian approaches in wildlife ecology and conservation. I encourage
+you to work along with me on the exercises. To participate in the
+exercises, you’ll need a recent version of R (<span class="math inline">\(\geqslant\)</span> 4.2).</p>
+<div id="installing-r-packages" class="section level3">
+<h3>Installing R packages</h3>
+<p>In the exercises, we will use a variety of R packages for exploratory
+data anlysis, visualizations, and fitting Bayesian models. I encourage
+you to install the packages below if you do not have them. The code
+below can be run in R to only install those packages that don’t
+currently exist on your system.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>required.packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;brms&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>, <span class="st">&#39;nimble&#39;</span>, <span class="st">&#39;MCMCvis&#39;</span>, <span class="st">&#39;coda&#39;</span>, <span class="st">&#39;loo&#39;</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>               <span class="st">&#39;sf&#39;</span>, <span class="st">&#39;stars&#39;</span>, <span class="st">&#39;spAbundance&#39;</span>, <span class="st">&#39;spOccupancy&#39;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>new.packages <span class="ot">&lt;-</span> required.packages[<span class="sc">!</span>(required.packages <span class="sc">%in%</span> <span class="fu">installed.packages</span>()[, <span class="st">&#39;Package&#39;</span>])]</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">length</span>(new.packages) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="fu">install.packages</span>(new.packages)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+</div>
 <div id="course-outline" class="section level2">
 <h2>Course outline</h2>
 <p>This 8-hour workshop will cover the following topics:</p>
@@ -105,28 +217,27 @@ inference</li>
 <li>The basics of Bayesian inference – how does it work?</li>
 <li>Bayesian linear models</li>
 <li>Bayesian generalized linear models</li>
-<li>Bayesian mixed models (i.e., hierarchical Bayesian models)</li>
+<li>Hierarchical Bayesian models</li>
 </ol>
 <p>Model fitting will primarily be done using the <code>brms</code>
-package, but code to fit the same models in <code>NIMBLE</code> will
-also be provided for direct comparison with the models fit in
-<code>brms</code>.</p>
-<p>Additional materials will also be provided (but not discussed) on the
-following topics:</p>
+package. Code to fit the same models in <code>NIMBLE</code> will also be
+provided for direct comparison with the models fit in <code>brms</code>.
+I will only spend a short amount of time introducing <code>NIMBLE</code>
+and rather this additional code is given for those interested in further
+learning <code>NIMBLE</code> after the course.</p>
+<p>Additional materials will also be provided on the following
+topics:</p>
 <ul>
-<li>Closed population capture-recapture models for estimating
-abundance</li>
-<li>Open population capture-recapture models (Cormack-Jolly-Seber)
-models for estimating survival</li>
 <li>Occupancy models for estimating species distributions</li>
 <li>N-mixture models for estimating abundance using unmarked data</li>
+<li>Hierarchical spatial models for working with spatial data</li>
 </ul>
 <hr />
 </div>
 <div id="github-code-repository" class="section level2">
 <h2>GitHub Code Repository</h2>
-<p>Code for all course lectures and exercises will be provided on a
-GitHub repository closer to the workshop date.</p>
+<p>Code for all course lectures and exercises will be available on
+GitHub the morning of the workshop.</p>
 </div>
 </section>
 
