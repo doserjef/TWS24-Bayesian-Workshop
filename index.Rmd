@@ -31,7 +31,7 @@ In the exercises, we will use a variety of R packages for exploratory data anlys
 
 ```{r, eval = FALSE}
 required.packages <- c('brms', 'ggplot2', 'nimble', 'MCMCvis', 'coda', 'loo', 
-		       'sf', 'stars', 'spAbundance', 'spOccupancy')
+                       'sf', 'stars', 'spAbundance', 'spOccupancy')
 new.packages <- required.packages[!(required.packages %in% installed.packages()[, 'Package'])]
 if (length(new.packages) > 0) {
   install.packages(new.packages)

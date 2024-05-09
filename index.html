@@ -201,7 +201,7 @@ you to install the packages below if you do not have them. The code
 below can be run in R to only install those packages that don’t
 currently exist on your system.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>required.packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;brms&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>, <span class="st">&#39;nimble&#39;</span>, <span class="st">&#39;MCMCvis&#39;</span>, <span class="st">&#39;coda&#39;</span>, <span class="st">&#39;loo&#39;</span>, </span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>               <span class="st">&#39;sf&#39;</span>, <span class="st">&#39;stars&#39;</span>, <span class="st">&#39;spAbundance&#39;</span>, <span class="st">&#39;spOccupancy&#39;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>                       <span class="st">&#39;sf&#39;</span>, <span class="st">&#39;stars&#39;</span>, <span class="st">&#39;spAbundance&#39;</span>, <span class="st">&#39;spOccupancy&#39;</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>new.packages <span class="ot">&lt;-</span> required.packages[<span class="sc">!</span>(required.packages <span class="sc">%in%</span> <span class="fu">installed.packages</span>()[, <span class="st">&#39;Package&#39;</span>])]</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">length</span>(new.packages) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="fu">install.packages</span>(new.packages)</span>
