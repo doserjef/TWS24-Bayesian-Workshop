@@ -48,6 +48,8 @@ This 8-hour workshop will cover the following topics:
 3. Bayesian generalized linear models
 4. Hierarchical Bayesian models 
 
+We will have a 30 min lunch break from 12:30-1pm CST, as well as a couple 15 min breaks dispersed throughout the day.
+
 Model fitting will primarily be done using the `brms` package. Code to fit the same models in `NIMBLE` will also be provided for direct comparison with the models fit in `brms`. I will only spend a short amount of time introducing `NIMBLE` and rather this additional code is given for those interested in further learning `NIMBLE` after the course.  
 
 Additional materials will also be provided on the following topics: 
@@ -60,4 +62,4 @@ Additional materials will also be provided on the following topics:
 
 ## GitHub Code Repository
 
-Code for all course lectures and exercises will be available on GitHub the morning of the workshop.
+Code for all exercises and examples in the course, as well as the associated lectures, are all available on [GitHub](https://github.com/doserjef/TWS24-Bayesian-Workshop). 

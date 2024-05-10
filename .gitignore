@@ -1,2 +1,5 @@
 documents/
 code/scratch.R
+.Rproj.user
+code/5c-glmm-brms-complete.R
+code/5d-glmm-nimble-complete.R
